@@ -4,5 +4,5 @@
 
 namespace AsciiDecode
 {
-std::string decode(std::string sequence);
+std::string decode(const std::string& input);
 };
