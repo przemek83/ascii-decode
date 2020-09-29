@@ -4,7 +4,7 @@
 //   - Digit 1 and 3 need to be concatenated to get first number.
 //   - Digit 2 and 4 need to be concatenated to get second number.
 //   - Sum of first and second number is an ascii code.
-//   
+//
 //   Decoding example:
 //   input in form of 24746211151814964359 is split into 2474 6211
 //   1518 1496 4359. For each 4 digits group we create first and second number:
@@ -35,25 +35,9 @@
 //   GREAT
 //   0
 
-#include <algorithm>
-#include <array>
-#include <cmath>
-#include <cstdlib>
 #include <iostream>
 
-static std::string decode(std::string sequence, unsigned int symbolsCount)
-{
-    std::string decoded;
-    for (unsigned int i = 0; i < symbolsCount; ++i)
-    {
-        int codedLetter(std::stoi(std::string(sequence, 4 * i, 4)));
-        int firstNumber{codedLetter / 1000 * 10 + codedLetter % 100 / 10};
-        int secondNumber{codedLetter % 1000 / 100 * 10 + codedLetter % 10};
-        char asciiCode = firstNumber + secondNumber;
-        decoded.append(1, asciiCode);
-    }
-    return decoded;
-}
+#include "AsciiDecode.h"
 
 int main()
 {
@@ -67,7 +51,7 @@ int main()
         std::string sequence;
         std::cin >> sequence;
 
-        std::cout << decode(sequence, symbolsCount) << std::endl;
+        std::cout << AsciiDecode::decode(sequence, symbolsCount) << std::endl;
     }
 
     return 0;
