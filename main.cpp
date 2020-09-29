@@ -16,19 +16,14 @@
 //   ASCII codes (sums) will give encoded string GREAT (71 = G, 82 = R, ...).
 
 // Input:
-//   First line - number of inputs.
-//   For each input first line contains number of 4 digit sequences.
-//   Second line is encoded ascii chars as sequences of 4 digits.
+//   Per line encoded ascii chars as sequences of 4 digits.
 //
 // Output
 //   Decoded ascii string.
 //
 // Example
 // In:
-//   2
-//   5
 //   24746211151814964359
-//   1
 //   2244
 
 // Out:
@@ -41,18 +36,8 @@
 
 int main()
 {
-    unsigned int testCases;
-    std::cin >> testCases;
-    for (unsigned int i = 0; i < testCases; ++i)
-    {
-        unsigned int symbolsCount{0};
-        std::cin >> symbolsCount;
-
-        std::string sequence;
-        std::cin >> sequence;
-
+    std::string sequence;
+    while (std::cin >> sequence)
         std::cout << AsciiDecode::decode(sequence) << std::endl;
-    }
-
     return 0;
 }
