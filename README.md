@@ -27,6 +27,7 @@ On input is given string `24746211151814964359`. String need to be split into `2
 | 1518 | 11 | 58 | 69 |
 | 1496 | 19 | 46 | 65 |
 | 4359 | 45 | 39 | 84 |
+
 ASCII codes (sums) will give encoded string `GREAT` (71 = `G`, 82 = `R`, ...).
 
 **Input**:  
