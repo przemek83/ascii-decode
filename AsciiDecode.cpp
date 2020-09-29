@@ -2,15 +2,23 @@
 
 namespace AsciiDecode
 {
-std::string decode(std::string sequence, unsigned int symbolsCount)
+static const unsigned int sequanceSize{4U};
+static const unsigned int DECIMAL_BASE{10U};
+
+std::string decode(std::string sequence)
 {
     std::string decoded;
-    for (unsigned int i = 0; i < symbolsCount; ++i)
+    const unsigned long symbolsCount{sequence.size() / sequanceSize};
+    for (unsigned long i = 0; i < symbolsCount; ++i)
     {
-        int codedLetter(std::stoi(std::string(sequence, 4 * i, 4)));
-        int firstNumber{codedLetter / 1000 * 10 + codedLetter % 100 / 10};
-        int secondNumber{codedLetter % 1000 / 100 * 10 + codedLetter % 10};
-        char asciiCode = firstNumber + secondNumber;
+        const int codedLetter(
+            std::stoi(std::string(sequence, sequanceSize * i, sequanceSize)));
+        const unsigned int firstNumber{codedLetter / 1000 * DECIMAL_BASE +
+                                       codedLetter % 100 / DECIMAL_BASE};
+        const unsigned int secondNumber{codedLetter % 1000 / 100 *
+                                            DECIMAL_BASE +
+                                        codedLetter % DECIMAL_BASE};
+        const char asciiCode{static_cast<char>(firstNumber + secondNumber)};
         decoded.append(1, asciiCode);
     }
     return decoded;

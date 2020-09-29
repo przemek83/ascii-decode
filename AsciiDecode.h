@@ -4,5 +4,5 @@
 
 namespace AsciiDecode
 {
-std::string decode(std::string sequence, unsigned int symbolsCount);
+std::string decode(std::string sequence);
 };

@@ -51,7 +51,7 @@ int main()
         std::string sequence;
         std::cin >> sequence;
 
-        std::cout << AsciiDecode::decode(sequence, symbolsCount) << std::endl;
+        std::cout << AsciiDecode::decode(sequence) << std::endl;
     }
 
     return 0;
