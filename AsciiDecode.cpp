@@ -14,14 +14,14 @@ static unsigned char getAsciiCode(unsigned int letterAsNumber)
     return firstNumber + secondNumber;
 }
 
-std::string decode(const std::string& input)
+std::string decode(const std::string& inputSequence)
 {
     std::string decoded;
-    const unsigned long symbolsCount{input.size() / SEQUANCE_SIZE};
+    const unsigned long symbolsCount{inputSequence.size() / SEQUANCE_SIZE};
     for (unsigned long i = 0; i < symbolsCount; ++i)
     {
         const std::string letterAsString{
-            std::string(input, SEQUANCE_SIZE * i, SEQUANCE_SIZE)};
+            std::string(inputSequence, SEQUANCE_SIZE * i, SEQUANCE_SIZE)};
         const unsigned int letterAsNumber(std::stoi(letterAsString));
         decoded.append(1, getAsciiCode(letterAsNumber));
     }
