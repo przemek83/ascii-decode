@@ -49,7 +49,7 @@ Use Cmake directly or your favorite IDE supporting CMake projects.
 Alternative:  
 Use bare compiler for building project binary:
 ```shell
-$ g++ -Wall -std=c++17 -Isrc -O3 -c *.cpp
+$ g++ -Wall -std=c++17 -O3 -c *.cpp
 $ g++ -Wall -std=c++17 -O3 -o ascii-decode *.o
 ```
 
