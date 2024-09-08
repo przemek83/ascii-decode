@@ -2,12 +2,12 @@
 
 #include <cstdint>
 
-namespace AsciiDecode
+namespace
 {
-static const unsigned int SEQUANCE_SIZE{4U};
-static const unsigned int DECIMAL_BASE{10U};
+constexpr unsigned int SEQUANCE_SIZE{4U};
+constexpr unsigned int DECIMAL_BASE{10U};
 
-static char getAsciiCode(unsigned int encodedAsciiAsNumber)
+char getAsciiCode(unsigned int encodedAsciiAsNumber)
 {
     const unsigned int firstNumber{encodedAsciiAsNumber / 1000 * DECIMAL_BASE +
                                    encodedAsciiAsNumber % 100 / DECIMAL_BASE};
@@ -16,7 +16,10 @@ static char getAsciiCode(unsigned int encodedAsciiAsNumber)
                                     encodedAsciiAsNumber % DECIMAL_BASE};
     return static_cast<char>(firstNumber + secondNumber);
 }
+}  // namespace
 
+namespace AsciiDecode
+{
 std::string decode(const std::string& inputSequence)
 {
     std::string decoded;
