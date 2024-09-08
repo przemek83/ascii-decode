@@ -1,5 +1,7 @@
 #include "AsciiDecode.h"
 
+#include <cstdint>
+
 namespace AsciiDecode
 {
 static const unsigned int SEQUANCE_SIZE{4U};
