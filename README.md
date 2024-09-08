@@ -20,18 +20,18 @@
 - [License](#license)
 
 # About
-Simple decoder creating, according to given rules, ascii chars from string of digits.
+Simple decoder creating, according to given rules, ASCII characters from a string of digits.
 
 # Problem description
-Decode string of digits into ascii string with following rules:
-* Each 4 consecutive digits encodes 1 ascii char.
-* Digit 1 and 3 of 4 digits sequence need to be concatenated to get first number.
-* Digit 2 and 4 of 4 digits sequence need to be concatenated to get second number.
-* Sum of first and second number is an ascii code encoded by 4 digit sequence.
+Decode a string of digits into an ASCII string with the following rules:
+* Each 4 consecutive digits encodes 1 ASCII char.
+* Digits 1 and 3 of the 4-digit  sequence need to be concatenated to get the first number.
+* Digits 2 and 4 of the 4-digit sequence need to be concatenated to get the second number.
+* Sum of the first and second numbers is an ASCII code encoded by a 4-digit sequence.
 
 **Decoding example**:  
-On input is given string `24746211151814964359`. String need to be split into `2474` `6211` `1518` `1496` `4359`. From each 4 digits group we extract first and second number also calculating sums:
-| 4 digits sequence | first number | second number | sum (first + second) |
+On input is given the string `24746211151814964359`. The string needs to be split into `2474` `6211` `1518` `1496` `4359`. From each four-digit group, we extract first and second number also calculating sums:
+| 4 digit sequence | first number | second number | sum (first + second) |
 | --- | --- | --- | --- |
 | 2474 | 27 | 44 | 71 |
 | 6211 | 61 | 21 | 82 |
@@ -39,13 +39,13 @@ On input is given string `24746211151814964359`. String need to be split into `2
 | 1496 | 19 | 46 | 65 |
 | 4359 | 45 | 39 | 84 |
 
-ASCII codes (sums) will give encoded string `GREAT` (71 = `G`, 82 = `R`, ...).
+ASCII codes (sums) will give the encoded string `GREAT` (71 = `G`, 82 = `R`, ...).
 
 **Input**:  
-In each line encoded ascii chars as sequences of 4 digits per sign.
+In each line, encoded ASCII characters are sequences of 4 digits per sign.
 
 **Output**:  
-Decoded ascii string.
+Decoded ASCII string.
 
 # Getting Started
 This section describes briefly how to set up the environment and build the project.
@@ -70,7 +70,7 @@ As a result of compilation, binary for simulations and binary for testing should
 | GoogleTest | 1.15.2 | 1.15.2 |
 
 # Usage
-Application expects on std in strings containing encoded ascii chars in form of 4 digit sequences.  
+Application expects on std in strings containing encoded ASCII chars in form of 4 digit sequences.  
 Example input:
 ```
 24746211151814964359
@@ -78,7 +78,7 @@ Example input:
 ```
 
 Examples of usage:  
-1. Pass example file named `testFile.txt` from project repo:
+1. Pass an example file named `testFile.txt` from the project repo:
     ```shell
     $ ./ascii-decode < testFile.txt
     GREAT
@@ -100,7 +100,7 @@ Examples of usage:
     0
     ```
 # Testing
-Project contains test subproject based on Goggle Test framework. Compile testing subproject and launch tests via IDE or directly from console.  
+The project contains a test subproject based on Goggle Test framework. Compile testing subproject and launch tests via IDE or directly from console.  
 Example run:
 ```
 $ ./ascii-decode-test.exe
@@ -120,7 +120,7 @@ $ ./ascii-decode-test.exe
 ```
 
 # License
-Project is distributed under the MIT License. See `LICENSE` for more information.
+The project is distributed under the MIT License. See `LICENSE` for more information.
 
 The project uses the following open-source software:
 | Name | License | Home | Description |
