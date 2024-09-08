@@ -14,7 +14,7 @@
 - [Getting Started](#getting-started)
    * [Prerequisites](#prerequisites)
    * [Building](#building)
-- [Built with](#built-with)
+   * [Used tools and libs](#used-tools-and-libs)
 - [Usage](#usage)
 - [Testing](#testing)
 - [License](#license)
@@ -48,29 +48,26 @@ In each line encoded ascii chars as sequences of 4 digits per sign.
 Decoded ascii string.
 
 # Getting Started
-This section describes briefly how to setup environment and build project.
+This section describes briefly how to set up the environment and build the project.
 
 ## Prerequisites
-C++ compiler with C++17 support as a minimum and CMake 3.8+. Additionally Git tool for downloading Google Test library as it is needed by test subproject.
+C++ compiler with C++17 support as a minimum and CMake 3.14+. Additionally, the Git tool for downloading the Google Test library is needed by the test subproject.
 
 ## Building
-Recommended:  
-Use Cmake directly or your favorite IDE supporting CMake projects.  
+Clone and use CMake directly or via any IDE supporting it. CMake should:
+- configure everything automatically,
+- compile and create binaries.
 
-Alternative:  
-Use bare compiler for building project binary:
-```shell
-$ g++ -Wall -std=c++17 -O3 -c *.cpp
-$ g++ -Wall -std=c++17 -O3 -o ascii-decode *.o
-```
+As a result of compilation, binary for simulations and binary for testing should be created.
 
-# Built with
+## Used tools and libs
 | Tool |  Windows 10 | Lubuntu 20.04 |
 | --- | --- | --- |
-| GCC | 7.3.0 | 9.3.0 |
-| Cmake | 3.14 | 3.17 |
-| Git | 2.20 | 2.25 |
-| QtCreator | 4.12.0 | 4.13.0 |
+| OS version | 10 22H2 | 24.04 |
+| GCC | 13.1.0 | 13.2.0 |
+| Cmake | 3.30.2 | 3.28.3 |
+| Git | 2.46.0 | 2.43.0 |
+| GoogleTest | 1.15.2 | 1.15.2 |
 
 # Usage
 Application expects on std in strings containing encoded ascii chars in form of 4 digit sequences.  
@@ -124,3 +121,8 @@ $ ./ascii-decode-test.exe
 
 # License
 Project is distributed under the MIT License. See `LICENSE` for more information.
+
+The project uses the following open-source software:
+| Name | License | Home | Description |
+| --- | --- | --- | --- |
+| GoogleTest | BSD-3-Clause | https://github.com/google/googletest | testing framework |
