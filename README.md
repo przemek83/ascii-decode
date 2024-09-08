@@ -1,3 +1,13 @@
+[![Build & test](https://github.com/przemek83/ascii-decode/actions/workflows/buld-and-test.yml/badge.svg)](https://github.com/przemek83/ascii-decode/actions/workflows/buld-and-test.yml)
+[![CodeQL](https://github.com/przemek83/ascii-decode/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/przemek83/ascii-decode/actions/workflows/github-code-scanning/codeql)
+[![codecov](https://codecov.io/gh/przemek83/ascii-decode/graph/badge.svg?token=2EMRTM8G4R)](https://codecov.io/gh/przemek83/ascii-decode)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=przemek83_ascii-decode&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=przemek83_ascii-decode)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=przemek83_ascii-decode&metric=bugs)](https://sonarcloud.io/summary/new_code?id=przemek83_ascii-decode)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=przemek83_ascii-decode&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=przemek83_ascii-decode)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=przemek83_ascii-decode&metric=coverage)](https://sonarcloud.io/summary/new_code?id=przemek83_ascii-decode)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=przemek83_ascii-decode&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=przemek83_ascii-decode)
+
 # Table of content
 - [About](#about)
 - [Problem description](#problem-description)
