@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#include "../AsciiDecode.h"
+#include <src/AsciiDecode.h>
 
 TEST(AsciiDecode, decodePositive)
 {

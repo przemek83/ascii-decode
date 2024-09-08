@@ -20,12 +20,14 @@ endif()
 file(COPY ${CMAKE_SOURCE_DIR}/testFile.txt DESTINATION ${CMAKE_BINARY_DIR})
 
 set(${PROJECT_NAME}_SOURCES
-    main.cpp
-    AsciiDecode.cpp
-    AsciiDecode.h
+    src/AsciiDecode.cpp
+    src/AsciiDecode.h
     )
 
-add_executable(${CMAKE_PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+add_library (${PROJECT_NAME}-lib STATIC ${${PROJECT_NAME}_SOURCES})
+
+add_executable(${PROJECT_NAME} src/main.cpp)
+target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}-lib)
 
 enable_testing()
 include(Tests.cmake)
