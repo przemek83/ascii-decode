@@ -13,7 +13,7 @@ char getAsciiCode(unsigned int encodedAsciiAsNumber)
         ((encodedAsciiAsNumber / 1000) * DECIMAL_BASE) +
         ((encodedAsciiAsNumber % 100) / DECIMAL_BASE)};
     const unsigned int secondNumber{
-        ((encodedAsciiAsNumber % 1000) / (100 * DECIMAL_BASE)) +
+        (((encodedAsciiAsNumber % 1000) / 100) * DECIMAL_BASE) +
         (encodedAsciiAsNumber % DECIMAL_BASE)};
     return static_cast<char>(firstNumber + secondNumber);
 }
