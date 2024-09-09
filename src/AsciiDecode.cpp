@@ -7,15 +7,15 @@ namespace
 constexpr unsigned int SEQUANCE_SIZE{4U};
 constexpr unsigned int DECIMAL_BASE{10U};
 
-unsigned char getAsciiCode(unsigned int encodedAsciiAsNumber)
+char getAsciiCode(unsigned int encodedAsciiAsNumber)
 {
     const unsigned int firstNumber{
-        (encodedAsciiAsNumber / 1000 * DECIMAL_BASE) +
-        (encodedAsciiAsNumber % 100 / DECIMAL_BASE)};
+        ((encodedAsciiAsNumber / 1000) * DECIMAL_BASE) +
+        ((encodedAsciiAsNumber % 100) / DECIMAL_BASE)};
     const unsigned int secondNumber{
-        (encodedAsciiAsNumber % 1000 / 100 * DECIMAL_BASE) +
+        ((encodedAsciiAsNumber % 1000) / (100 * DECIMAL_BASE)) +
         (encodedAsciiAsNumber % DECIMAL_BASE)};
-    return static_cast<unsigned char>(firstNumber + secondNumber);
+    return static_cast<char>(firstNumber + secondNumber);
 }
 }  // namespace
 
