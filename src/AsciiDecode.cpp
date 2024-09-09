@@ -7,18 +7,19 @@ namespace
 constexpr unsigned int SEQUANCE_SIZE{4U};
 constexpr unsigned int DECIMAL_BASE{10U};
 
-char getAsciiCode(unsigned int encodedAsciiAsNumber)
+unsigned char getAsciiCode(unsigned int encodedAsciiAsNumber)
 {
-    const unsigned int firstNumber{encodedAsciiAsNumber / 1000 * DECIMAL_BASE +
-                                   encodedAsciiAsNumber % 100 / DECIMAL_BASE};
-    const unsigned int secondNumber{encodedAsciiAsNumber % 1000 / 100 *
-                                        DECIMAL_BASE +
-                                    encodedAsciiAsNumber % DECIMAL_BASE};
-    return static_cast<char>(firstNumber + secondNumber);
+    const unsigned int firstNumber{
+        (encodedAsciiAsNumber / 1000 * DECIMAL_BASE) +
+        (encodedAsciiAsNumber % 100 / DECIMAL_BASE)};
+    const unsigned int secondNumber{
+        (encodedAsciiAsNumber % 1000 / 100 * DECIMAL_BASE) +
+        (encodedAsciiAsNumber % DECIMAL_BASE)};
+    return static_cast<unsigned char>(firstNumber + secondNumber);
 }
 }  // namespace
 
-namespace AsciiDecode
+namespace ascii
 {
 std::string decode(const std::string& inputSequence)
 {
@@ -34,4 +35,4 @@ std::string decode(const std::string& inputSequence)
     }
     return decoded;
 }
-};  // namespace AsciiDecode
+};  // namespace ascii

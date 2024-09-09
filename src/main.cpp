@@ -6,6 +6,6 @@ int main()
 {
     std::string sequence;
     while (std::cin >> sequence)
-        std::cout << AsciiDecode::decode(sequence) << std::endl;
+        std::cout << ascii::decode(sequence) << "\n";
     return 0;
 }
