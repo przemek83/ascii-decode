@@ -103,7 +103,7 @@ Examples of usage:
 The project contains a test subproject based on Goggle Test framework. Compile testing subproject and launch tests via IDE or directly from console.  
 Example run:
 ```
-$ ./ascii-decode-test.exe
+$ ./ascii-decode-tests.exe
 (...)
 [==========] Running 2 tests from 1 test suite.
 [----------] Global test environment set-up.
